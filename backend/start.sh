@@ -1,4 +1,5 @@
 #!/usr/bin/env bash
+cd /app/backend 2>/dev/null || cd "$(dirname "$0")"
 set -e
 echo "==> Migrando base de datos..."
 python manage.py migrate --noinput

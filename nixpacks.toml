@@ -1,11 +1,4 @@
-[phases.setup]
-nixPkgs = ["python311", "python311Packages.pip", "gcc"]
-
-[phases.install]
-cmds = [
-  "python -m pip install --upgrade pip",
-  "python -m pip install -r backend/requirements.txt"
-]
-
+# Dejar que Nixpacks auto-detecte Python y configure pip.
+# Solo sobreescribimos el comando de arranque.
 [start]
 cmd = "bash backend/start.sh"
