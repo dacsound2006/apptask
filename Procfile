@@ -1,1 +1,1 @@
-web: gunicorn cloudtasks.wsgi --chdir backend
+web: bash backend/start.sh
